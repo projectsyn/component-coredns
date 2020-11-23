@@ -1,0 +1,3 @@
+parameters:
+  coredns:
+    namespace: syn-coredns

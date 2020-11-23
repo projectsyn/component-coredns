@@ -1,0 +1,5 @@
+= coredns
+
+coredns is a Commodore component to manage coredns.
+
+See the xref:references/parameters.adoc[parameters] reference for further details.
