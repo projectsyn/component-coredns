@@ -3,7 +3,7 @@ local inv = kap.inventory();
 local params = inv.parameters.coredns;
 local argocd = import 'lib/argocd.libjsonnet';
 
-local app = argocd.App('coredns', params.namespace);
+local app = argocd.App('coredns', params.namespace, secrets=false);
 
 {
   coredns: app,
