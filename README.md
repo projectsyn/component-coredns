@@ -1,6 +1,6 @@
-# Commodore Component: coredns
+# Commodore Component: CoreDNS
 
-This is a [Commodore][commodore] Component for coredns.
+This is a [Commodore][commodore] Component for CoreDNS.
 
 This repository is part of Project Syn.
 For documentation on Project Syn and this component, see https://syn.tools.
