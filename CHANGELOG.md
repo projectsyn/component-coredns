@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 
-- …
+- Initial implementation ([#1])
 
-[Unreleased]: https://github.com/projectsyn/component-coredns/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/projectsyn/component-coredns/compare/64e591c066ac2500127774a6fb28f0514a3ac6d6...HEAD
+
+[#1]: https://github.com/projectsyn/component-coredns/pull/1

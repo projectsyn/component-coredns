@@ -6,14 +6,44 @@ The parent key for all of the following parameters is `coredns`.
 
 [horizontal]
 type:: string
-default:: `syn-coredns`
+default:: `kube-system`
 
 The namespace in which to deploy this component.
+
+== `configMapName`
+
+[horizontal]
+type:: string
+default:: `coredns`
+
+The name of the ConfigMap to create.
+
+== `baseConfig`
+
+[horizontal]
+type:: string
+default:: See https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/#coredns-configmap-options
+
+The base configuration for CoreDNS. See the https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/#coredns-configmap-options[official docs].
+
+This base config includes the format string `%s` to include `extraConfig`.
+
+
+== `extraConfig`
+
+[horizontal]
+type:: string
+default:: `""`
+
+Additional configuration which will be added to the `baseConfig`.
 
 
 == Example
 
 [source,yaml]
 ----
-namespace: example-namespace
+parameters:
+  coredns:
+    extraConfig: |
+      k8s_external ext.cluster.local
 ----

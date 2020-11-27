@@ -1,10 +1,23 @@
-// main template for coredns
 local kap = import 'lib/kapitan.libjsonnet';
 local kube = import 'lib/kube.libjsonnet';
 local inv = kap.inventory();
-// The hiera parameters for the component
 local params = inv.parameters.coredns;
+local instance = inv.parameters._instance;
 
-// Define outputs below
+local configmap = kube.ConfigMap(params.configMapName) {
+  metadata+: {
+    namespace: params.namespace,
+    labels+: {
+      'app.kubernetes.io/component': 'coredns',
+      'app.kubernetes.io/instance': instance,
+      'app.kubernetes.io/managed-by': 'commodore',
+    },
+  },
+  data: {
+    Corefile: params.baseConfig % params.extraConfig,
+  },
+};
+
 {
+  '10_coredns_config': configmap,
 }
