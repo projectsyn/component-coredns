@@ -2,7 +2,3 @@
   componentName: coredns
   githubUrl: https://github.com/projectsyn/component-coredns
   feature_goldenTests: true
-
-docs/antora.yml:
-  name: coredns
-  title: coredns
