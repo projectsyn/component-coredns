@@ -5,7 +5,7 @@ on:
       - master
 
 env:
-  COMPONENT_NAME: coredns
+  COMPONENT_NAME: CoreDNS
 
 jobs:
   linting:
