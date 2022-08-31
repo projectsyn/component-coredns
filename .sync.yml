@@ -1,4 +1,0 @@
-:global:
-  componentName: CoreDNS
-  githubUrl: https://github.com/projectsyn/component-coredns
-  feature_goldenTests: true
