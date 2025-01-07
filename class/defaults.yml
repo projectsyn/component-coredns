@@ -2,6 +2,7 @@ parameters:
   coredns:
     =_metadata:
       multi_instance: true
+      multi_tenant: true
     namespace: kube-system
     configMapName: coredns
     baseConfig: |
